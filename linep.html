@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <link rel="stylesheet" href="ol.css">
+   <script src="ol.js"></script>
+
+    </head>
+  <body>
+        <div id="map" class="map" style='width:700px;height:500px'></div>
+        <script>
+
+//create a var object and load style
+
+var polyStyle =  new ol.style.Style({fill: new ol.style.Fill({color: [205, 194, 300, 1], }),
+    stroke: new ol.style.Stroke({color: '#000',width: 1}),
+    image: new ol.style.Circle({radius: 7,fill: new ol.style.Fill({color: '#f45',})
+    })
+});
+
+//create a vector source to load the vector objects
+
+var vectorSource = new ol.source.Vector({});
+
+//Create the map object, set view and add map tiles from OSM. add the any object tagged vectorSource to the map
+
+var map = new ol.Map({
+  layers: [new ol.layer.Tile({
+          source: new ol.source.OSM}),
+      new ol.layer.Vector({ source: vectorSource,style: polyStyle})
+  ],
+  target: 'map',
+  view: new ol.View({center: ol.proj.transform([8.00, 9.00], 'EPSG:4326', 'EPSG:3857'),zoom: 6})
+});
+
+//Use the ol.geom to load a polygon
+
+var poly = new ol.geom.Polygon( [[
+    ol.proj.transform([3.50,7.50], 'EPSG:4326', 'EPSG:3857'),
+    ol.proj.transform([8.50, 9.70], 'EPSG:4326', 'EPSG:3857'),
+    ol.proj.transform([5.00, 6.67], 'EPSG:4326', 'EPSG:3857')
+]]);
+
+// Use the ol.feature to create a vector source from the polygon
+var featurepoly = new ol.Feature({name: "poly", geometry: poly});
+vectorSource.addFeature(featurepoly);
+
+//Use the ol.geom to load a polyline
+
+var polyline = new ol.geom.Polygon([[
+    ol.proj.transform([10.50,11.50], 'EPSG:4326', 'EPSG:3857'),
+    ol.proj.transform([4.50, 9.70], 'EPSG:4326', 'EPSG:3857')
+ ]]);
+
+//Use the ol.feature to create a vector source from the polyline
+
+var featureline = new ol.Feature({name: "polyline", geometry: polyline});
+vectorSource.addFeature(featureline);
+
+//lets do a second polygon using ol.geom function
+
+var poly2 = new ol.geom.Polygon( [[
+    ol.proj.transform([11.30,9.00], 'EPSG:4326', 'EPSG:3857'),
+    ol.proj.transform([8.50, 8.70], 'EPSG:4326', 'EPSG:3857'),
+    ol.proj.transform([10.00, 10.67], 'EPSG:4326', 'EPSG:3857')
+]]);
+
+// agin use the ol.feature to create a vector source from this polygon
+var featurepoly2 = new ol.Feature({name: "poly2", geometry: poly2});
+vectorSource.addFeature(featurepoly2);
+
+//You can continue with this process 
+</script>
+</body>
+</html>
