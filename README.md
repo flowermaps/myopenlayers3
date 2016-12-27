@@ -26,7 +26,7 @@ or you can use the openlayers hosted JS and CSS libraries at the location below 
     with this:
 
 &lt;link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" &gt;<br>
-    &lt;script src="https://openlayers.org/en/v3.20.1/build/ol.js">&lt;/script&gt;
+    &lt;script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script&gt;
     
     and follow steps 3-4 above.
 
