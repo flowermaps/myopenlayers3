@@ -7,12 +7,29 @@ ol.css - openlayers3 CSS file
 markers.html - sample code for map displaying markers or point features on an openlayers3 map
 linep.html - sample code for map displaying line and polygon features on an openlayers3 map
 
-Unzip the folder and save to your desktop. Make sure all your html files are saved in the same folder.
+Using Tutorial
 
-or you can use the openlayers hosted JS and CSS libraries at the location below in the header section of your web page:
+1.Click Download and take unzip folder option. Unzip the folder and save on your desktop.
+2. Copy the source code and paste into a Preferred Text editor like Notepad, Wordpad, Sublime text
+3. Name it and Save as .html in the folder you donwloaded and unzipped.
+4. Open the html file with a modern browser and your maps and their features should appear.
+
+
+or you can use the openlayers hosted JS and CSS libraries at the location below in the header section of your web page, in which case you do not have to download the folder from github:
+
+1. simply copy your code and replace the header links to the JS and CSS files
+
+<link rel="stylesheet" href="ol.css" >
+    <script src="/ol.js"></script>
+    
+    with this:
 
 <link rel="stylesheet" href="https://openlayers.org/en/v3.20.1/css/ol.css" >
     <script src="https://openlayers.org/en/v3.20.1/build/ol.js"></script>
     
-    attribution: <a href="https://openlayers.org/">openlayers3.org</a>
-    copyright by <a href="https://mapsnigeriainitiative.com">mapsnigeriainitiative.com</a>......mapping today
+    and follow steps 3-4 above.
+
+
+
+attribution: openlayers3.org
+    copyright by mapsnigeriainitiative.com......mapping today
