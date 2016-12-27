@@ -1,5 +1,6 @@
 # myopenlayers3
 Creating and publishing web maps using openlayers3
+
 Contents
 
 ol.js - openlayers3 javascript file
@@ -32,4 +33,5 @@ or you can use the openlayers hosted JS and CSS libraries at the location below 
 
 
 attribution: openlayers3.org
+
     copyright by mapsnigeriainitiative.com......mapping today
