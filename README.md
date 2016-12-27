@@ -10,7 +10,7 @@ linep.html - sample code for map displaying line and polygon features on an open
 
 Using Tutorial
 
-1.Click Download and take unzip folder option. Unzip the folder and save on your desktop.
+1.Click green button Clone or Download and take download zipped folder option. Unzip the folder and save on your desktop.
 2. Copy the source code and paste into a Preferred Text editor like Notepad, Wordpad, Sublime text
 3. Name it and Save as .html in the folder you donwloaded and unzipped.
 4. Open the html file with a modern browser and your maps and their features should appear.
