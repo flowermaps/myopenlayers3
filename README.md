@@ -20,8 +20,8 @@ or you can use the openlayers hosted JS and CSS libraries at the location below 
 
 1. simply copy your code and replace the header links to the JS and CSS files
 
-<link rel="stylesheet" href="ol.css" >
-    <script src="/ol.js"></script>
+<code><link rel="stylesheet" href="ol.css" ></code>
+    <code><script src="/ol.js"></script></code>
     
     with this:
 
